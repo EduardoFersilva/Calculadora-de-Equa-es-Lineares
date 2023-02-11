@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>CALCULADORA DE EQUAÇÕES LINEARES</h1>
+    <h3>Nossa calculadora vai te ajudar na resolução de equações lineares, utilizando a regra <br>
+    de Cramer para encontraros valores dos determinantes</h5>
+    <h2>PARA INICIAR DIGITE QUANTAS <br> INCÓGNITAS POSSUI SUA EQUAÇÃO</h2>
+    <form>
+      <input class="campo" type="number" min="1" max="3" name="nome1" id="nome2" >
+      <input class="botao" type="button" value="CALCULAR" onclick="abrirModal('modal', nome1.value)">
+    </form>
+
+    <div id="modal1"><!--Inicio modal 1-->
+      <div class="container">
+        <button class="fechar" onclick="fecharModal('modal1')"> x </button>
+        <h1 class="m1">Matriz = 1</h1>
+        <table>
+          <tr>
+             <th>X1</th>
+             <th>N</th>
+          </tr>
+          <tr> 
+            <td><input type="number" name="n1" id="a1Modal1" /></td>
+            <td><input type="number" name="n3" id="n1Modal1" /></td>
+          </tr>
+        </table>
+        <button class="botao2" onclick="executaDois('resultModal1')">CALCULAR</button>
+        
+      </div>
+
+      <div id="resultModal1">
+        <h1>CALCULADORA DE EQUAÇÕES LINEARES</h1>
+        <h2>Resultado:</h2>
+        <div class="resultado">
+          <x1>x= <n id="resultadof"></n></x1>
+        </div>
+        <h4>Passo a Passo:</h4><br>
+        <h5 id="dModal1"></u></h5><br>
+        <h5 id="x1Modal1"></h5>
+        
+        <button class="botao" onclick="window.location.reload()">Fazer novo calculo </button>
+      </div>
+    </div><!--Fim modal 1-->
+
+    <div id="modal2"><!--Inicio modal 2-->
+      <div class="container">
+        <button class="fechar" onclick="fecharModal('modal2')"> x </button>
+        <h1 class="m1">Matriz = 2</h1>
+        <table>
+          <tr>
+             <th>X1</th>
+             <th>X2</th>
+             <th>N</th>
+          </tr>
+          <tr> 
+            <td><input type="number" name="n1" id="a1Modal2" /></td>
+            <td><input type="number" name="n2" id="b1Modal2" /></td>
+            <td><input type="number" name="n3" id="n1Modal2" /></td>
+          </tr>
+          <tr>
+            <td><input type="number" name="n4" id="a2Modal2" /></td>
+            <td><input type="number" name="n5" id="b2Modal2" /></td>
+            <td><input type="number" name="n6" id="n2Modal2" /></td>
+          </tr>
+        </table>
+        <button class="botao2" onclick="executaDois('resultModal2')">CALCULAR</button>
+        
+      </div>
+
+      <div id="resultModal2">
+        <h1>CALCULADORA DE EQUAÇÕES LINEARES</h1>
+        <h2>Resultado:</h2>
+        <div class="resultado">
+          <x1>x1= <n id="resultadoa"></n></x1><br>
+          <x2>x2= <n id="resultadob"></n></x2>
+        </div>
+        <h4>Passo a Passo:</h4><br>
+        <h5 id="dModal2"></h5><br>
+        <h5 id="x1Modal2"></h5><br>
+        <h5 id="d1Modal2"></h5><br>
+        <h5 id="x2Modal2"></h5><br>
+        <h5 id="d2Modal2"></h5><br>
+        
+        <button class="botao" onclick="window.location.reload()">Fazer novo calculo </button>
+      </div>
+    </div><!--Fim modal 2-->
+
+    <div id="modal3"><!--Inicio modal 3-->
+      <div class="container">
+        <button class="fechar" onclick="fecharModal('modal3')"> x </button>
+        <h1 class="m1">Matriz = 3</h1>
+        <table>
+          <tr>
+             <th>X1</th>
+             <th>X2</th>
+             <th>X3</th>
+             <th>N</th>
+          </tr>
+          <tr> 
+            <td><input type="number" id="a1Modal3" /></td>
+            <td><input type="number" id="b1Modal3" /></td>
+            <td><input type="number" id="c1Modal3" /></td>
+            <td><input type="number" id="n1Modal3" /></td>
+          </tr>
+          <tr>
+            <td><input type="number" id="a2Modal3" /></td>
+            <td><input type="number" id="b2Modal3" /></td>
+            <td><input type="number" id="c2Modal3" /></td>
+            <td><input type="number" id="n2Modal3" /></td>
+          </tr>
+          <tr>
+            <td><input type="number" id="a3Modal3" /></td>
+            <td><input type="number" id="b3Modal3" /></td>
+            <td><input type="number" id="c3Modal3" /></td>
+            <td><input type="number" id="n3Modal3" /></td>
+          </tr>
+        </table>
+        <button class="botao2" onclick="executaDois('resultModal3')">CALCULAR</button>
+      </div>
+      <div id = "resultModal3">
+        <h1>CALCULADORA DE EQUAÇÕES LINEARES</h1>
+        <h2>Resultado:</h2>
+        <div class="resultado">
+          <x1>x1= <n id="resultadoc"></n></x1><br>
+          <x2>x2= <n id="resultadod"></n></x2><br>
+          <x3>x3= <n id="resultadoe"></n></x3><br>
+        </div>
+        <h4>Passo a Passo:</h4><br>
+        <h5/h5 id="dModal3"></h5><br>
+        <h5/h5 id="x1Modal3"></h5><br>
+        <h5/h5 id="d1Modal3"></h5><br>
+        <h5/h5 id="x2Modal3"></h5><br>
+        <h5/h5 id="d2Modal3"></h5><br>
+        <h5/h5 id="x3Modal3"></h5><br>
+        <h5/h5 id="d3Modal3"></h5>
+        
+        <button class="botao" onclick="window.location.reload()">Fazer novo calculo </button>
+      </div>
+    </div><!--Fim modal 3-->
+
+</body>
+</html>
